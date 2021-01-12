@@ -13,6 +13,7 @@
 		7954894C25AD1F5B00A5AABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7954894B25AD1F5B00A5AABA /* Assets.xcassets */; };
 		7954894F25AD1F5B00A5AABA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7954894E25AD1F5B00A5AABA /* Preview Assets.xcassets */; };
 		7954895225AD1F5B00A5AABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7954895025AD1F5B00A5AABA /* LaunchScreen.storyboard */; };
+		7954895D25AD230F00A5AABA /* FindPWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7954895C25AD230F00A5AABA /* FindPWView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7954894E25AD1F5B00A5AABA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7954895125AD1F5B00A5AABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7954895325AD1F5B00A5AABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7954895C25AD230F00A5AABA /* FindPWView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPWView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7954894525AD1F5900A5AABA /* AppDelegate.swift */,
 				7954894725AD1F5900A5AABA /* SceneDelegate.swift */,
 				7954894925AD1F5900A5AABA /* ContentView.swift */,
+				7954895C25AD230F00A5AABA /* FindPWView.swift */,
 				7954894B25AD1F5B00A5AABA /* Assets.xcassets */,
 				7954895025AD1F5B00A5AABA /* LaunchScreen.storyboard */,
 				7954895325AD1F5B00A5AABA /* Info.plist */,
@@ -147,6 +150,7 @@
 			files = (
 				7954894625AD1F5900A5AABA /* AppDelegate.swift in Sources */,
 				7954894825AD1F5900A5AABA /* SceneDelegate.swift in Sources */,
+				7954895D25AD230F00A5AABA /* FindPWView.swift in Sources */,
 				7954894A25AD1F5900A5AABA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,10 +299,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.TestCollectionView.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.TestCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,10 +320,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.TestCollectionView.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.TestCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

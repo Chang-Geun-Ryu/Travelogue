@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FindPWView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.init("backgroundColor").edgesIgnoringSafeArea(.all)
+            Text("Hello, World!")
+        }.navigationBarTitle("SwiftUI", displayMode: .inline)
     }
 }
 

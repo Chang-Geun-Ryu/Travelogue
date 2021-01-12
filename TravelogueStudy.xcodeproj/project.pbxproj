@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4219730D25A997FE0096DB8D /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4219730B25A997CB0096DB8D /* NanumSquareRegular.ttf */; };
+		4219730F25A998010096DB8D /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4219730C25A997E90096DB8D /* NanumSquareBold.ttf */; };
+		4219731725A9ACAA0096DB8D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219731625A9ACAA0096DB8D /* SignInVC.swift */; };
+		4219731B25A9ACB90096DB8D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219731A25A9ACB90096DB8D /* SignUpVC.swift */; };
+		4219731E25A9ACCE0096DB8D /* FindPW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219731D25A9ACCE0096DB8D /* FindPW.swift */; };
+		4268BE6D25A98041007FC407 /* NanumGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4268BE6C25A98037007FC407 /* NanumGothic.ttf */; };
 		7908492025A8384D00649CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908491F25A8384D00649CED /* AppDelegate.swift */; };
 		7908492225A8384D00649CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908492125A8384D00649CED /* SceneDelegate.swift */; };
-		7908492425A8384D00649CED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908492325A8384D00649CED /* ViewController.swift */; };
+		7908492425A8384D00649CED /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908492325A8384D00649CED /* LoginVC.swift */; };
 		7908492725A8384D00649CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7908492525A8384D00649CED /* Main.storyboard */; };
 		7908492925A8385000649CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7908492825A8385000649CED /* Assets.xcassets */; };
 		7908492C25A8385000649CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7908492A25A8385000649CED /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4219730B25A997CB0096DB8D /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
+		4219730C25A997E90096DB8D /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
+		4219731625A9ACAA0096DB8D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		4219731A25A9ACB90096DB8D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		4219731D25A9ACCE0096DB8D /* FindPW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPW.swift; sourceTree = "<group>"; };
+		4268BE6C25A98037007FC407 /* NanumGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.ttf; sourceTree = "<group>"; };
 		7908491C25A8384D00649CED /* TravelogueStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelogueStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7908491F25A8384D00649CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7908492125A8384D00649CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7908492325A8384D00649CED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7908492325A8384D00649CED /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7908492625A8384D00649CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7908492825A8385000649CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7908492B25A8385000649CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4219731425A9AC5C0096DB8D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				7908492325A8384D00649CED /* LoginVC.swift */,
+				4219731625A9ACAA0096DB8D /* SignInVC.swift */,
+				4219731A25A9ACB90096DB8D /* SignUpVC.swift */,
+				4219731D25A9ACCE0096DB8D /* FindPW.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		4219731525A9AC690096DB8D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4268BE6C25A98037007FC407 /* NanumGothic.ttf */,
+				4219730B25A997CB0096DB8D /* NanumSquareRegular.ttf */,
+				4219730C25A997E90096DB8D /* NanumSquareBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7908491325A8384D00649CED = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +91,12 @@
 			children = (
 				7908491F25A8384D00649CED /* AppDelegate.swift */,
 				7908492125A8384D00649CED /* SceneDelegate.swift */,
-				7908492325A8384D00649CED /* ViewController.swift */,
 				7908492525A8384D00649CED /* Main.storyboard */,
 				7908492825A8385000649CED /* Assets.xcassets */,
 				7908492A25A8385000649CED /* LaunchScreen.storyboard */,
 				7908492D25A8385000649CED /* Info.plist */,
+				4219731525A9AC690096DB8D /* Font */,
+				4219731425A9AC5C0096DB8D /* VC */,
 			);
 			path = TravelogueStudy;
 			sourceTree = "<group>";
@@ -124,8 +158,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4219730D25A997FE0096DB8D /* NanumSquareRegular.ttf in Resources */,
+				4268BE6D25A98041007FC407 /* NanumGothic.ttf in Resources */,
 				7908492C25A8385000649CED /* LaunchScreen.storyboard in Resources */,
 				7908492925A8385000649CED /* Assets.xcassets in Resources */,
+				4219730F25A998010096DB8D /* NanumSquareBold.ttf in Resources */,
 				7908492725A8384D00649CED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7908492425A8384D00649CED /* ViewController.swift in Sources */,
+				7908492425A8384D00649CED /* LoginVC.swift in Sources */,
+				4219731E25A9ACCE0096DB8D /* FindPW.swift in Sources */,
 				7908492025A8384D00649CED /* AppDelegate.swift in Sources */,
+				4219731725A9ACAA0096DB8D /* SignInVC.swift in Sources */,
+				4219731B25A9ACB90096DB8D /* SignUpVC.swift in Sources */,
 				7908492225A8384D00649CED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7746RVFJ9;
 				INFOPLIST_FILE = TravelogueStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7746RVFJ9;
 				INFOPLIST_FILE = TravelogueStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

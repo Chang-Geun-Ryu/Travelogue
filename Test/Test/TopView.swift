@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct TopView: View {
-    @Binding var isLogin: Bool
-    @Binding var orderType: TimeOrder
+//    @Binding var isLogin: Bool
+//    var isLogin: Bool
+    var vm: TravelVM
+//    @Binding var orderType: TimeOrder
     @Binding var touchedOrderBtn: Bool
     let title: String
     var body: some View {
         HStack {
             Button(action: {
-                self.isLogin = false
+                vm.isLogin = false
+//                self.isLogin = false
             }, label: {
                 Image(systemName: "arrow.left")
                     .resizable()
@@ -43,6 +46,7 @@ struct TopView: View {
 
 struct TopView_Previews: PreviewProvider {
     static var previews: some View {
-        TopView(isLogin: .constant(false), orderType: .constant(.new), touchedOrderBtn: .constant(false), title: "title")
+//        TopView(isLogin: .constant(false), orderType: .constant(.new), touchedOrderBtn: .constant(false), title: "title")
+        TopView(vm: TravelVM(), touchedOrderBtn: .constant(false), title: "title")
     }
 }

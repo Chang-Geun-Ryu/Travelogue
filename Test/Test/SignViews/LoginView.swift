@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Binding var isLogin: Bool
+    @ObservedObject var vm: TravelVM
+//    @Binding var isLogin: Bool
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var userID = ""
     @State var password = ""
     @State var passwordConfir = ""
-    @State var isError = false
+//    @State var isError = false
     let errorUserID = "올바른 아이디를 입력하세요"
     let errorPassword = "올바른 비밀번호를 입력하세요"
     let errorPasswordConfir = "비밀번호가 같도록 입력하세요"
@@ -28,20 +29,21 @@ struct LoginView: View {
                     VStack {
                         CustomNavigationBar(presentationMode: presentationMode, title: self.viewType.rawValue)
                             .frame(height: proxy.size.height / 4)
-                        UnderLineTextField(placehold: "UserID", userInfo: $userID, error: $isError)
+                        UnderLineTextField(placehold: "UserID", userInfo: $userID, error: vm.isError)
                             .padding([.bottom, .horizontal])
                             .overlay(
-                                TextView(text: self.isError ? errorUserID : nil),
+                                TextView(text: vm.isError ? errorUserID : nil),
                                 alignment: .bottomLeading)
                         if viewType == .SignIn || viewType == SignViewType.SignUp {
-                            UnderLineTextField(placehold: "Password", userInfo: $password, error: $isError)
+                            UnderLineTextField(placehold: "Password", userInfo: $password, error: vm.isError)
                                 .padding([.bottom, .horizontal])
                                 .overlay(
-                                    TextView(text: self.isError ? errorPassword : nil),
+                                    TextView(text: vm.isError ? errorPassword : nil),
                                     alignment: .bottomLeading)
                                 .overlay(
                                     NavigationLink(
-                                        destination: LoginView(isLogin: $isLogin, viewType: .FindPW),
+                                        destination: LoginView(vm: vm, viewType: .FindPW),
+//                                        destination: LoginView(isLogin: $isLogin, viewType: .FindPW),
                                         label: {
                                             if viewType == .SignIn {
                                                 Text("비밀번호찾기")
@@ -54,10 +56,10 @@ struct LoginView: View {
                                     , alignment: .bottomTrailing)
                         }
                         if viewType == .SignUp {
-                            UnderLineTextField(placehold: "PasswordConfir", userInfo: $passwordConfir, error: $isError)
+                            UnderLineTextField(placehold: "PasswordConfir", userInfo: $passwordConfir, error: vm.isError)
                                 .padding([.bottom, .horizontal])
                                 .overlay(
-                                    TextView(text: self.isError ? errorPasswordConfir : nil),
+                                    TextView(text: vm.isError ? errorPasswordConfir : nil),
                                     alignment: .bottomLeading)
                         }
                     }
@@ -88,7 +90,7 @@ struct LoginView: View {
         var elements: [[String?]] = []
         
         for n in 0..<type.getNames().count {
-            elements.append([type.getNames()[n], self.isError ? type.getErrorStrings()[n] : nil])
+            elements.append([type.getNames()[n], vm.isError ? type.getErrorStrings()[n] : nil])
         }
         
         print(elements)
@@ -96,12 +98,13 @@ struct LoginView: View {
     }
     
     private func touchButton() {
-        self.isError = true
+        vm.isError = true
         switch self.viewType {
         case .SignIn:
             if self.userID == "1" && self.password == "1" {
-                self.isLogin = true
-                self.isError = false
+                vm.isLogin = true
+//                self.isLogin = true
+                vm.isError = false
             }
             return
         default:
@@ -123,9 +126,12 @@ struct TextView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        LoginView(isLogin: .constant(false), viewType: .SignIn)
-        LoginView(isLogin: .constant(false), viewType: .SignUp)
-        LoginView(isLogin: .constant(false), viewType: .FindPW)
+        let vm = TravelVM()
+        LoginView(vm: vm, viewType: .SignIn)
+        LoginView(vm: vm, viewType: .SignUp)
+        LoginView(vm: vm, viewType: .FindPW)
+//        LoginView(isLogin: .constant(false), viewType: .SignIn)
+//        LoginView(isLogin: .constant(false), viewType: .SignUp)
+//        LoginView(isLogin: .constant(false), viewType: .FindPW)
     }
 }

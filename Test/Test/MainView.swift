@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var isLogin: Bool = true
+//    @State var isLogin: Bool = true
+    @ObservedObject var travelVM = TravelVM()
+//    @Environment var travelVM = TravelVM()
     var body: some View {
-        if isLogin {
-            TripMainView(isLogin: $isLogin)
+        if travelVM.isLogin {
+            TripMainView(vm: travelVM)
+//            TripMainView(isLogin: travelVM.isLogin)
         } else {
-            SignView(isLogin: $isLogin)
+            SignView(vm: travelVM)
+//            SignView(isLogin: $isLogin)
         }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        MainView(isLogin: false)
-        MainView(isLogin: true)
+        MainView()
+//        MainView(isLogin: false)
+//        MainView(isLogin: true)
     }
 }

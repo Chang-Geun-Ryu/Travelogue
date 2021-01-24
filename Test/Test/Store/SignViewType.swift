@@ -34,20 +34,21 @@ struct Trip: Hashable, Identifiable {
     let date: String
     let imageName: String
     let order: Int
+    var detailTrips: [DetailTrip]
 }
 
-class TripData {
+struct TripData {
     static let names = ["홍천", "남이섬", "영월"]
     static let dates = ["7/9 - AM 10:00", "7/9 - AM 10:00", "7/9 - AM 10:00"]
     static let images = ["H", "N", "Y"]
     
     var lists = [
-        Trip(name: names[0], date: dates[0], imageName: images[0], order: 0),
-        Trip(name: names[1], date: dates[1], imageName: images[1], order: 1),
-        Trip(name: names[2], date: dates[2], imageName: images[2], order: 2)
+        Trip(name: names[0], date: dates[0], imageName: images[0], order: 0, detailTrips: DetailTripData().lists),
+        Trip(name: names[1], date: dates[1], imageName: images[1], order: 1, detailTrips: DetailTripData().lists),
+        Trip(name: names[2], date: dates[2], imageName: images[2], order: 2, detailTrips: DetailTripData().lists)
     ]
     
-    func orderList(_ order: Bool) {
+    mutating func orderList(_ order: Bool) {
         self.lists.sort {
             order ? $0.order < $1.order : $0.order > $1.order
         }

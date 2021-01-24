@@ -26,6 +26,7 @@
 		EC40907A25B3173B007E09BB /* DetailTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40907925B3173B007E09BB /* DetailTripView.swift */; };
 		EC40907E25B317CC007E09BB /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40907D25B317CC007E09BB /* TopView.swift */; };
 		EC62683825B57678005A6247 /* PlayAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62683725B57677005A6247 /* PlayAudioView.swift */; };
+		ECEECF5625BBFD9E0064991B /* TravelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEECF5525BBFD9E0064991B /* TravelVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EC40907925B3173B007E09BB /* DetailTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripView.swift; sourceTree = "<group>"; };
 		EC40907D25B317CC007E09BB /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		EC62683725B57677005A6247 /* PlayAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAudioView.swift; sourceTree = "<group>"; };
+		ECEECF5525BBFD9E0064991B /* TravelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				EC2B576625B11DA0005CAABA /* SignViews */,
 				EC2B576B25B15E59005CAABA /* TripViews */,
 				EC2B576125B023FF005CAABA /* Store */,
+				ECEECF5425BBFC350064991B /* ViewModel */,
 				7954894B25AD1F5B00A5AABA /* Assets.xcassets */,
 				7954895025AD1F5B00A5AABA /* LaunchScreen.storyboard */,
 				7954895325AD1F5B00A5AABA /* Info.plist */,
@@ -144,6 +147,14 @@
 				EC2B576725B120BC005CAABA /* TabBarView.swift */,
 			);
 			path = TripViews;
+			sourceTree = "<group>";
+		};
+		ECEECF5425BBFC350064991B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECEECF5525BBFD9E0064991B /* TravelVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 				EC2B576325B02416005CAABA /* SignViewType.swift in Sources */,
 				7954895D25AD230F00A5AABA /* FindPWView.swift in Sources */,
 				7954894A25AD1F5900A5AABA /* SignView.swift in Sources */,
+				ECEECF5625BBFD9E0064991B /* TravelVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

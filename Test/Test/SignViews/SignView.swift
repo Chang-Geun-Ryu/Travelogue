@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SignView: View {
-    @Binding var isLogin: Bool
-    
+//    @Binding var isLogin: Bool
+    var vm: TravelVM
     var body: some View {
         NavigationView {
             ZStack {
@@ -28,18 +28,19 @@ struct SignView: View {
                     
                     VStack(spacing: -15.0) {
                         NavigationLink(
-                            destination: LoginView(isLogin: $isLogin, viewType: .SignIn),
+                            destination: LoginView(vm: vm, viewType: .SignIn),
+//                            destination: LoginView(isLogin: $isLogin, viewType: .SignIn),
                             label: {
                                 MainButton(label: "로그인")
                             })
                         NavigationLink(
-                            destination: LoginView(isLogin: $isLogin, viewType: .SignUp),
+                            destination: LoginView(vm: vm, viewType: .SignUp),
+//                            destination: LoginView(isLogin: $isLogin, viewType: .SignUp),
                             label: {
                                 MainButton(label: "회원가입")
                             })
                     }
                     .navigationBarHidden(true)
-                    
                     
                     HStack {
                         Image(systemName: "info.circle.fill")
@@ -62,14 +63,14 @@ struct SignView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SignView(isLogin: .constant(false))
+        SignView(vm: TravelVM())
+//        SignView(isLogin: .constant(false))
     }
 }
 
@@ -92,7 +93,7 @@ struct MainButton: View {
 struct UnderLineTextField: View {
     let placehold: String
     @Binding var userInfo: String
-    @Binding var error: Bool
+    var error: Bool
     
     var body: some View {
         VStack {

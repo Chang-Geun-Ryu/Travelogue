@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayAudioView: View {
+    var title: String
     var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .top){
@@ -20,7 +21,7 @@ struct PlayAudioView: View {
                         Image(systemName: "line.horizontal.3")
                     }
                     Spacer()
-                    Text("text")
+                    Text(title)
                     Spacer()
                     HStack() {
                         Text("1:20")
@@ -45,6 +46,6 @@ struct PlayAudioView: View {
 
 struct PlayAudioView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayAudioView()
+        PlayAudioView(title: "title")
     }
 }

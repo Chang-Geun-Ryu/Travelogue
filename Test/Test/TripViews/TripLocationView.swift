@@ -8,37 +8,41 @@
 import SwiftUI
 
 struct TripLocationView: View {
-    let locationName: String
-    let date: String
-    let imageString: String
-    @Binding var seleted: Int
+    let tripInfo: Trip
+//    let locationName: String
+//    let date: String
+//    let imageString: String
+//    @Binding var seleted: Int
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
-                Text(locationName)
+                Text(tripInfo.name)
                     .font(Font.custom("NanumSquareOTFR", size: 24))
-                Text(date)
+                Text(tripInfo.date)
                     .font(Font.custom("NanumSquareOTFR", size: 14))
                     .alignmentGuide(.leading, computeValue: { dimension in
                         dimension[.leading]
                     })
             }
             .padding(.leading, 25)
-            Image(imageString)
+            
+            Image(tripInfo.imageName)
                 .padding(.vertical, -15)
         }
         .frame(alignment: .leading)
         .background(Color.clear)
-        .onTapGesture {
+//        .onTapGesture {
 //            isShowPlayAudio.toggle()
-            seleted = 1
-        }
+//            seleted = 1
+//            vm.selectTrip
+//        }
     }
 }
 
 struct TripLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        TripLocationView(locationName: "홍천", date: "7/9 - AM 10:00", imageString: "H", seleted: .constant(0))
+        TripLocationView(tripInfo: TripData().lists[0])
+//        TripLocationView(tripInfo: Trip(), seleted: .constant(0))
     }
 }
 //

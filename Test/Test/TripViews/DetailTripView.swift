@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct DetailTripView: View {
+    @EnvironmentObject var vm: TravelVM
     let detailTrip: DetailTrip
-//    let locationName: String
-//    let date: String
-//    let imageString: String
-//    @Binding var isShowPlayAudio: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -36,15 +33,12 @@ struct DetailTripView: View {
                     .padding(-20)
             }
         }
-//        .onTapGesture {
-//            isShowPlayAudio.toggle()
-//        }
     }
 }
 
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailTripView(detailTrip: TripData().lists[0].detailTrips[0])
+        DetailTripView(detailTrip: TripData().lists[0].detailTrips[0]).environmentObject(TravelVM())
     }
 }

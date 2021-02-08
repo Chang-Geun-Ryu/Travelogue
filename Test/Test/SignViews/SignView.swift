@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct SignView: View {
-//    @Binding var isLogin: Bool
-    var vm: TravelVM
+    @EnvironmentObject var vm: TravelVM
     var body: some View {
         NavigationView {
             ZStack {
@@ -28,14 +27,12 @@ struct SignView: View {
                     
                     VStack(spacing: -15.0) {
                         NavigationLink(
-                            destination: LoginView(vm: vm, viewType: .SignIn),
-//                            destination: LoginView(isLogin: $isLogin, viewType: .SignIn),
+                            destination: LoginView(viewType: .SignIn),
                             label: {
                                 MainButton(label: "로그인")
                             })
                         NavigationLink(
-                            destination: LoginView(vm: vm, viewType: .SignUp),
-//                            destination: LoginView(isLogin: $isLogin, viewType: .SignUp),
+                            destination: LoginView(viewType: .SignUp),
                             label: {
                                 MainButton(label: "회원가입")
                             })
@@ -69,8 +66,7 @@ struct SignView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SignView(vm: TravelVM())
-//        SignView(isLogin: .constant(false))
+        SignView().environmentObject(TravelVM())
     }
 }
 

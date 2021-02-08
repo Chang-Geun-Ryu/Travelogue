@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct TopView: View {
-//    @Binding var isLogin: Bool
-//    var isLogin: Bool
-    var vm: TravelVM
-//    @Binding var orderType: TimeOrder
+    @EnvironmentObject var vm: TravelVM
     @Binding var touchedOrderBtn: Bool
     let title: String
     var body: some View {
         HStack {
             Button(action: {
-                vm.isLogin = false
-//                self.isLogin = false
+                if vm.isShowDetailView {
+                    vm.isShowDetailView.toggle()
+                } else if vm.isShowPlayAudio {
+                    vm.isShowPlayAudio.toggle()
+                } else {
+                    vm.isLogin = false
+                }
             }, label: {
                 Image(systemName: "arrow.left")
                     .resizable()
@@ -46,7 +48,6 @@ struct TopView: View {
 
 struct TopView_Previews: PreviewProvider {
     static var previews: some View {
-//        TopView(isLogin: .constant(false), orderType: .constant(.new), touchedOrderBtn: .constant(false), title: "title")
-        TopView(vm: TravelVM(), touchedOrderBtn: .constant(false), title: "title")
+        TopView(touchedOrderBtn: .constant(false), title: "title").environmentObject(TravelVM())
     }
 }

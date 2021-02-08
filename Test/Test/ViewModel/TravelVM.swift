@@ -8,6 +8,9 @@ final class TravelVM: ObservableObject {
     @Published var listOrder = TimeOrder.new
     @Published var selectedDetailName: String?
     
+    @Published var isShowPlayAudio: Bool = false
+    @Published var isShowDetailView: Bool = false
+    
     var selectedName: String?
     
     func getDetailTrip() -> [DetailTrip] {
@@ -25,4 +28,15 @@ final class TravelVM: ObservableObject {
     func selectTrip(name: String? = nil) {
         self.selectedName = name
     }
+    
+    func getSelectedDetailTrip() -> DetailTrip? {
+        guard let name = selectedDetailName else { return nil }
+        
+        return getDetailTrip().filter { $0.name == name }.first
+    }
+    
+//    func callPhone(number: String) {
+//        guard let number = URL(string: "tel://" + number) else { return }
+//        UIApplication.shared.open(number)
+//    }
 }

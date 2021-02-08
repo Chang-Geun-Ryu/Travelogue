@@ -26,7 +26,9 @@
 		EC40907A25B3173B007E09BB /* DetailTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40907925B3173B007E09BB /* DetailTripView.swift */; };
 		EC40907E25B317CC007E09BB /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40907D25B317CC007E09BB /* TopView.swift */; };
 		EC62683825B57678005A6247 /* PlayAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62683725B57677005A6247 /* PlayAudioView.swift */; };
+		ECB4A0AB25CCEFC900CDBE45 /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4A0AA25CCEFC900CDBE45 /* LocationInfoView.swift */; };
 		ECEECF5625BBFD9E0064991B /* TravelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEECF5525BBFD9E0064991B /* TravelVM.swift */; };
+		ECEECF5D25C11F710064991B /* NanumTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEECF5C25C11F710064991B /* NanumTextModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +53,9 @@
 		EC40907925B3173B007E09BB /* DetailTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripView.swift; sourceTree = "<group>"; };
 		EC40907D25B317CC007E09BB /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		EC62683725B57677005A6247 /* PlayAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAudioView.swift; sourceTree = "<group>"; };
+		ECB4A0AA25CCEFC900CDBE45 /* LocationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoView.swift; sourceTree = "<group>"; };
 		ECEECF5525BBFD9E0064991B /* TravelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVM.swift; sourceTree = "<group>"; };
+		ECEECF5C25C11F710064991B /* NanumTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanumTextModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				EC2B577025B15F22005CAABA /* CustomNavigationBar.swift */,
 				EC40907D25B317CC007E09BB /* TopView.swift */,
 				EC40907625B31248007E09BB /* MainView.swift */,
+				ECEECF5B25C11D9C0064991B /* ViewModifier */,
 				EC2B576625B11DA0005CAABA /* SignViews */,
 				EC2B576B25B15E59005CAABA /* TripViews */,
 				EC2B576125B023FF005CAABA /* Store */,
@@ -145,6 +150,7 @@
 				EC40907925B3173B007E09BB /* DetailTripView.swift */,
 				EC62683725B57677005A6247 /* PlayAudioView.swift */,
 				EC2B576725B120BC005CAABA /* TabBarView.swift */,
+				ECB4A0AA25CCEFC900CDBE45 /* LocationInfoView.swift */,
 			);
 			path = TripViews;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 				ECEECF5525BBFD9E0064991B /* TravelVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ECEECF5B25C11D9C0064991B /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				ECEECF5C25C11F710064991B /* NanumTextModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,7 @@
 			files = (
 				EC40907E25B317CC007E09BB /* TopView.swift in Sources */,
 				EC62683825B57678005A6247 /* PlayAudioView.swift in Sources */,
+				ECEECF5D25C11F710064991B /* NanumTextModifier.swift in Sources */,
 				EC000A7025AD6514002BD5F1 /* LoginView.swift in Sources */,
 				7954894625AD1F5900A5AABA /* AppDelegate.swift in Sources */,
 				EC40907A25B3173B007E09BB /* DetailTripView.swift in Sources */,
@@ -243,6 +258,7 @@
 				EC2B576325B02416005CAABA /* SignViewType.swift in Sources */,
 				7954895D25AD230F00A5AABA /* FindPWView.swift in Sources */,
 				7954894A25AD1F5900A5AABA /* SignView.swift in Sources */,
+				ECB4A0AB25CCEFC900CDBE45 /* LocationInfoView.swift in Sources */,
 				ECEECF5625BBFD9E0064991B /* TravelVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

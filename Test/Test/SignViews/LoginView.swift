@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var vm: TravelVM
-//    @Binding var isLogin: Bool
+//    @ObservedObject var vm: TravelVM
+    @EnvironmentObject var vm: TravelVM
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var userID = ""
     @State var password = ""
     @State var passwordConfir = ""
-//    @State var isError = false
     let errorUserID = "올바른 아이디를 입력하세요"
     let errorPassword = "올바른 비밀번호를 입력하세요"
     let errorPasswordConfir = "비밀번호가 같도록 입력하세요"
@@ -42,8 +41,7 @@ struct LoginView: View {
                                     alignment: .bottomLeading)
                                 .overlay(
                                     NavigationLink(
-                                        destination: LoginView(vm: vm, viewType: .FindPW),
-//                                        destination: LoginView(isLogin: $isLogin, viewType: .FindPW),
+                                        destination: LoginView(viewType: .FindPW),
                                         label: {
                                             if viewType == .SignIn {
                                                 Text("비밀번호찾기")
@@ -103,14 +101,12 @@ struct LoginView: View {
         case .SignIn:
             if self.userID == "1" && self.password == "1" {
                 vm.isLogin = true
-//                self.isLogin = true
                 vm.isError = false
             }
             return
         default:
             print("other type!")
         }
-        
     }
 }
 
@@ -126,12 +122,8 @@ struct TextView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        let vm = TravelVM()
-        LoginView(vm: vm, viewType: .SignIn)
-        LoginView(vm: vm, viewType: .SignUp)
-        LoginView(vm: vm, viewType: .FindPW)
-//        LoginView(isLogin: .constant(false), viewType: .SignIn)
-//        LoginView(isLogin: .constant(false), viewType: .SignUp)
-//        LoginView(isLogin: .constant(false), viewType: .FindPW)
+        LoginView(viewType: .SignIn).environmentObject(TravelVM())
+        LoginView(viewType: .SignUp).environmentObject(TravelVM())
+        LoginView(viewType: .FindPW).environmentObject(TravelVM())
     }
 }
